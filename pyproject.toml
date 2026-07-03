@@ -1,0 +1,44 @@
+[project]
+name = "ai-delivery-control-plane"
+version = "0.1."
+description = "Approval-gated control plane for turning AI requests into auditable delivery workflows"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = ["ai", "fastapi", "workflow", "governance", "human-in-the-loop", "mcp"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: FastAPI",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "jinja2>=3.1,<4",
+  "pydantic-settings>=2.6,<3",
+  "sentry-sdk[fastapi]>=2.18,<3",
+  "uvicorn[standard]>=0.32,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9", "pytest-asyncio>=0.24,<1"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
