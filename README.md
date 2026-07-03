@@ -32,7 +32,21 @@ idempotency remain outside the transport layer.
 
 ## Workflow
 
-`RECEIVED → CLASSIFIED → DRAFTED → PENDING_APPROVAL → APPROVED → EXECUTING → COMPLETED`
+```
+Business Request
+      ↓
+Classification
+      ↓
+Solution Brief
+      ↓
+Human Approval
+      ↓
+Idempotent Execution
+      ↓
+Audit Trail
+```
+
+**State Machine**: `RECEIVED → CLASSIFIED → DRAFTED → PENDING_APPROVAL → APPROVED → EXECUTING → COMPLETED`
 
 Failures enter `FAILED`; cancellation is supported by the state model. The planner may read standards,
 but cannot write. The executor refuses to run without a stored approval record and matching token.
@@ -119,6 +133,13 @@ python -m app.eval.run_eval
 - 100% of write actions require approval
 - Every run produces state-transition audit records and connector traces
 - Sample flow completes in under 60 seconds
+
+## Documentation
+
+- [Architecture](docs/architecture.md) - System architecture and component design
+- [Design Decisions](docs/design-decisions.md) - Key technical decisions and trade-offs
+- [Security Model](docs/security-model.md) - Security architecture and threat model
+- [Roadmap](docs/roadmap.md) - Development roadmap and future enhancements
 
 ## Security and scope
 
