@@ -147,7 +147,8 @@ python -m app.eval.run_eval
 - [Architecture](docs/architecture.md) - System architecture and component design
 - [Design Decisions](docs/design-decisions.md) - Key technical decisions and trade-offs
 - [Security Model](docs/security-model.md) - Security architecture and threat model
-- [Roadmap](docs/roadmap.md) - Development roadmap and future enhancements
+- [Roadmap](docs/roadmap.md) - Detailed technical roadmap and implementation phases
+- [Product Roadmap](ROADMAP.md) - High-level product vision and evolution path
 
 ## Security and scope
 
