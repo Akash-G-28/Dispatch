@@ -1,5 +1,13 @@
 # Dispatch
 
+Dispatch turns meeting notes and vague business ideas into structured, governed engineering work that is ready for execution.
+
+It classifies the request, gathers context, applies engineering standards, produces a solution brief and delivery plan, enforces human approval, and prepares the downstream workflow for coding tools such as Codex, Cursor, Claude Code, or Devin.
+
+Dispatch is not another code-generation assistant. It is the orchestration layer between business intent and engineering execution.
+
+Status: Alpha reference implementation. External connectors currently run in deterministic demo mode and do not create real GitHub, Notion, Slack, or coding-agent resources until their MCP transports are implemented.
+
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
