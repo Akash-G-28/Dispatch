@@ -1,6 +1,6 @@
 # Dispatch
 
-Dispatch turns meeting notes and vague business ideas into structured, governed engineering work that is ready for execution.
+**Dispatch is an AI Engineering Orchestrator that transforms business ideas into governed engineering execution.**
 
 It classifies the request, gathers context, applies engineering standards, produces a solution brief and delivery plan, enforces human approval, and prepares the downstream workflow for coding tools such as Codex, Cursor, Claude Code, or Devin.
 
